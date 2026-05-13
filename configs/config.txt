@@ -1,0 +1,21 @@
+// If you want to test the system with random inputs or create your own custom setup,
+// you can edit here.
+
+A[22] //size of shared buffer A 
+B[12] //size of shared buffer B 
+t:20 //defines runtime. app will exit after 20 sec 
+ 
+P1>A //producer with id P1 produces component A 
+P2>A 
+P3>B //producer with id P3 produces component B 
+A>C1 //consumer with id C1 consumes component A 
+B>C2 
+B>C3>A //consumer with id C3 consumes component B 
+  //and produces component A 
+ 
+P1:2 //Producer with id P1 will create component each 2ms 
+P2:3  
+P3:2 
+C1:2 //Consumer with id C1 will consume component each 2ms 
+C2:3 
+C3:2 
