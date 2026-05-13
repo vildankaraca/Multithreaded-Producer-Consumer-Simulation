@@ -62,11 +62,6 @@ make exp4
 make exp5
 ```
 
-> **Note:** Experiments 1, 2, and 4 use `B[1]` as a dummy value.
-> The parser requires both buffers to be defined to run correctly,
-> even if Buffer B is not used in the routing logic.
-> Experiments 3 and 5 use Buffer B in routing, so no dummy value is needed.
-
 ### 4. Clean Build Files
 To remove the generated object files and the executable, use:
 ```bash
